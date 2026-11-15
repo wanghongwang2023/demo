@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>林小满 · 产品设计师</title>
+<meta name="description" content="林小满，产品设计师，专注 B 端产品体验与设计系统。">
+<style>
+  :root{
+    --paper:#faf8f5;
+    --ink:#1c1a17;
+    --muted:#6f6a63;
+    --line:#e3ded6;
+    --accent:#b4471e;
+    --card:#ffffff;
+    --max:960px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(250,248,245,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:600;letter-spacing:.02em}
+  .brand span{color:var(--accent)}
+  nav ul{display:flex;gap:26px;list-style:none}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s}
+  nav a:hover{color:var(--ink)}
+
+  header{padding:110px 0 90px}
+  .eyebrow{
+    font-size:13px;letter-spacing:.14em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:26px;font-weight:500;
+  }
+  h1{
+    font-size:clamp(40px,7vw,68px);
+    line-height:1.14;
+    letter-spacing:-.02em;
+    font-weight:600;
+    margin-bottom:30px;
+  }
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:44px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:100px;
+    text-decoration:none;font-size:15px;font-weight:500;
+    transition:transform .18s, background .18s, border-color .18s;
+  }
+  .btn-solid{background:var(--ink);color:var(--paper)}
+  .btn-solid:hover{transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+
+  section{padding:76px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:42px;gap:20px}
+  h2{font-size:26px;font-weight:600;letter-spacing:-.01em}
+  .sec-note{font-size:14px;color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:26px;transition:transform .22s, box-shadow .22s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(28,26,23,.07)}
+  .card .tag{font-size:12px;color:var(--accent);letter-spacing:.08em;margin-bottom:12px}
+  .card h3{font-size:17px;font-weight:600;margin-bottom:10px}
+  .card p{font-size:14px;color:var(--muted);line-height:1.7}
+
+  .about{display:grid;grid-template-columns:1fr 1.4fr;gap:56px}
+  .about h2{margin-bottom:0}
+  .about p{color:var(--muted);margin-bottom:18px}
+  .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+  .skills span{
+    font-size:13px;padding:6px 14px;border:1px solid var(--line);
+    border-radius:100px;color:var(--muted);
+  }
+
+  footer{padding:52px 0 64px;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer p{font-size:14px;color:var(--muted)}
+  footer a{color:var(--accent);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:760px){
+    header{padding:70px 0 60px}
+    .grid{grid-template-columns:1fr}
+    .about{grid-template-columns:1fr;gap:26px}
+    nav ul{display:none}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">林小满<span>.</span></div>
+    <ul>
+      <li><a href="#work">作品</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">产品设计师 · 上海</p>
+    <h1>把复杂的事<br>做得<em>简单</em>一点</h1>
+    <p class="lede">六年 B 端产品设计经验，做过数据平台、协作工具和企业中台。相信好的设计是让人少想一步，而不是多看一屏。</p>
+    <div class="cta">
+      <a class="btn btn-solid" href="#work">看作品</a>
+      <a class="btn btn-ghost" href="mailto:hello@example.com">邮件联系</a>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>代表作品</h2>
+      <span class="sec-note">2023 — 2026</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <p class="tag">数据平台</p>
+        <h3>经营看板重构</h3>
+        <p>把 47 个指标重新组织成三层信息结构，用户找到目标数据的时间从 90 秒降到 12 秒。</p>
+      </article>
+      <article class="card">
+        <p class="tag">协作工具</p>
+        <h3>审批流简化</h3>
+        <p>砍掉两级冗余节点，配合默认值策略，让平均审批周期缩短 40%。</p>
+      </article>
+      <article class="card">
+        <p class="tag">设计系统</p>
+        <h3>组件库落地</h3>
+        <p>从 6 套并行样式收敛为 1 套令牌体系，前端复用率提升到 78%。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <h2>关于我</h2>
+    <div>
+      <p>做过四年咨询、两年产品。习惯先问清楚"这个功能解决谁的什么问题"，再动手画界面。</p>
+      <p>业余写一点设计笔记，也在带两个刚入行的新人。</p>
+      <div class="skills">
+        <span>交互设计</span>
+        <span>信息架构</span>
+        <span>用户研究</span>
+        <span>Figma</span>
+        <span>设计系统</span>
+        <span>数据分析</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p>想聊聊？写信到 <a href="mailto:hello@example.com">hello@example.com</a></p>
+    <p>© 2026 林小满</p>
+  </div>
+</footer>
+
+</body>
+</html>
